@@ -55,5 +55,15 @@ public class Circle extends Shapes{
 		double circumference = radius *2 *Math.PI;
 		return circumference;
 	}
+	
+	/*
+	 * Calculate area of circle
+	 */
+	@Override
+	public double calculateArea() {
+		radius = this.calculateRadius(this.getMiddle(), this.getRadiusPoint());
+		double area = Math.pow(radius, 2) *Math.PI;
+		return area;
+	}
 
 }
