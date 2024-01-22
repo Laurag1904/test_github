@@ -45,5 +45,15 @@ public class Circle extends Shapes{
 					Math.pow(radiusPoint.getY() - middle.getY(), 2));
         return radius;
     }
+	
+	/*
+	 * Calculate circumference of the circle
+	 */
+	@Override
+	public double calculateCircumference() {
+		radius = this.calculateRadius(this.getMiddle(), this.getRadiusPoint());
+		double circumference = radius *2 *Math.PI;
+		return circumference;
+	}
 
 }
