@@ -11,6 +11,17 @@ public class Rectangle extends Shapes{
         this.point1 = point1;
         this.point2 = point2;
     }
+    
+    /*
+     * Calculates the circumference of the Rectangle
+     */
+	@Override
+	public double calculateCircumference() {
+		double length = Math.abs(point2.getX() - point1.getX());
+		double width = Math.abs(point2.getY() - point1.getY());
+		double circumference = 2 *length + 2*width;
+		return circumference;
+	}
 	
 	
 	
