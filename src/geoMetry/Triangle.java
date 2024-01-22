@@ -14,8 +14,15 @@ public class Triangle extends Shapes {
         this.sideLengths = new double[] {
             calculateSide(point1, point2),
             calculateSide(point2, point3),
-            calculateSide(point3, point1)
-        };
+            calculateSide(point3, point1);
+        }
+    }
+    
+    /*
+     * Calculates individual lengths
+     */
+	public double calculateSide(Coordinate point1, Coordinate point2) {
+        return Math.sqrt(Math.pow(point2.getX() - point1.getX(), 4) + Math.pow(point2.getY() - point1.getY(), 4));
     }
 
 }
