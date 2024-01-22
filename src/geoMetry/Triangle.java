@@ -37,5 +37,15 @@ public class Triangle extends Shapes {
         return circumference;
 	}
 
+	/*
+	 * calculates area of triangle
+	 */
+	@Override
+	public double calculateArea() {
+		double s = calculateCircumference() / 2;
+        double flaeche = Math.sqrt(s * (s - sideLengths[0]) * (s - sideLengths[1]) * (s - sideLengths[2]));
+        return flaeche;
+	}
+
 
 }
