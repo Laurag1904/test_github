@@ -24,5 +24,18 @@ public class Triangle extends Shapes {
 	public double calculateSide(Coordinate point1, Coordinate point2) {
         return Math.sqrt(Math.pow(point2.getX() - point1.getX(), 4) + Math.pow(point2.getY() - point1.getY(), 4));
     }
+	
+	/*
+	 * Calculates circumference of triangle
+	 */
+	@Override
+	public double calculateCircumference() {
+		double circumference = 0;
+        for (double sideLength : sideLengths) {
+            circumference += sideLength;
+        }
+        return circumference;
+	}
+
 
 }
