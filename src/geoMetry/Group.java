@@ -42,7 +42,7 @@ public class Group {
 
         for (Shapes shape : shapes) {
             if (!seenShapes.contains(shape)) {
-                totalPerimeter += shape.calculatePerimeter();
+                totalPerimeter += shape.calculateArea();
                 seenShapes.add(shape);
             }
         }
