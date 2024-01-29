@@ -1,28 +1,28 @@
 package geoMetry;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Group {
-	
-	private class Group {
-	    private ArrayList<Shape> shapes = new ArrayList<>();
 
-	    public void addShape(Shape shape) {
+	private public class Group {
+	    private ArrayList<Shapes> shapes = new ArrayList<>();
+
+	    public void addShape(Shapes shape) {
 	        shapes.add(shape);
 	    }
 
-	    public void removeShape(Shape shape) {
+	    public void removeShape(Shapes shape) {
 	        shapes.remove(shape);
 	    }
 
 	    public double totalArea() {
 	        double totalArea = 0;
-	        Set<Shape> seenShapes = new HashSet<>();
+	        Set<Shapes> seenShapes = new HashSet<>();
 
 	
 	    }
-	}
+	
 	
 	public double calculateTotalArea() {
         double totalArea = 0;
