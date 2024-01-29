@@ -27,7 +27,7 @@ public class Group {
 	public double calculateTotalArea() {
         double totalArea = 0;
         Set<Shapes> seenShapes = new HashSet<>();
-        for (Shapes shape : shapess) {
+        for (Shapes shape : Shapes) {
             if (!seenShapes.contains(shape)) {
                 totalArea += shape.calculateArea();
                 seenShapes.add(shape);
@@ -35,5 +35,20 @@ public class Group {
         }
         return totalArea;
     }
+	
+	public double calculateTotalPerimeter() {
+        double totalPerimeter = 0;
+        Set<Shapes> seenShapes = new HashSet<>();
 
+        for (Shapes shape : shapes) {
+            if (!seenShapes.contains(shape)) {
+                totalPerimeter += shape.calculatePerimeter();
+                seenShapes.add(shape);
+            }
+        }
+
+        return totalPerimeter;
+    }
 }
+
+
