@@ -28,7 +28,7 @@ import java.util.Set;
 	public double calculateTotalArea() {
         double totalArea = 0;
         Set<Shapes> seenShapes = new HashSet<>();
-        for (Shapes shape : Shapes) {
+        for (Shapes shape : seenShapes) {
             if (!seenShapes.contains(shape)) {
                 totalArea += shape.calculateArea();
                 seenShapes.add(shape);
