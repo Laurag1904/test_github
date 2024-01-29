@@ -14,8 +14,9 @@ public class Triangle extends Shapes {
         this.sideLengths = new double[] {
             calculateSide(point1, point2),
             calculateSide(point2, point3),
-            calculateSide(point3, point1);
-     }
+            calculateSide(point3, point1)
+        };
+    }
     
     
     /*
