@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-	private public class Group {
+	 public class Group {
 	    private ArrayList<Shapes> shapes = new ArrayList<>();
 
 	    public void addShape(Shapes shape) {
@@ -19,6 +19,7 @@ import java.util.Set;
 	    public double totalArea() {
 	        double totalArea = 0;
 	        Set<Shapes> seenShapes = new HashSet<>();
+			return totalArea;
 
 	
 	    }
