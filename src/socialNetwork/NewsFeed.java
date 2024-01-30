@@ -8,4 +8,12 @@ public class NewsFeed {
 	 private String title;
 	 private String content;
 	 
+	public NewsFeed(ArrayList<NewsFeed> newsfeed, String title, String content) {
+		this.newsfeed = newsfeed;
+		this.title = title;
+		this.content = content;
+	}
+	 
+	 
+	 
 }
