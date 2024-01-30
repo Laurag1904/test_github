@@ -50,6 +50,28 @@ import java.util.Set;
 
         return totalPerimeter;
     }
+	
+	public Shapes largestShapes(){
+		double maxArea = 0.0;
+		
+		for (Shapes shape : shapes) {
+            double area = shape.calculateArea();
+            if( area >= maxArea ) {
+            	maxArea = area;
+            }
+        }
+		return null; 
+	
+	}
+	
+
+	
+	public void printAllShapes() {
+		
+	}
+	
+	
+	
 }
 
 
