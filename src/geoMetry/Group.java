@@ -67,11 +67,17 @@ import java.util.Set;
 
 	
 	public void printAllShapes() {
+		if (shapes.isEmpty()) {
+            System.out.println("Die Gruppe enthält keine Formen.");
+        } else {
+        	 System.out.println("Formen in der Gruppe:");
+             for (Shapes shape : shapes) {
+                 System.out.println(" - Flächeninhalt: " + shape.getArea());
+             }
+         }
+     
+       }
 		
 	}
 	
-	
-	
-}
-
 
