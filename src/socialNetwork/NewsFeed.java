@@ -13,6 +13,32 @@ public class NewsFeed {
 		this.title = title;
 		this.content = content;
 	}
+
+	public ArrayList<NewsFeed> getNewsfeed() {
+		return newsfeed;
+	}
+
+	public void setNewsfeed(ArrayList<NewsFeed> newsfeed) {
+		this.newsfeed = newsfeed;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+	
+	
 	 
 	 
 	 
