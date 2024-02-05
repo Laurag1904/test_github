@@ -7,10 +7,10 @@ public class News {
 	private String name;
 	private String text;
 	private LocalDate Date;
-	private String readers;
+	private String like;
 	private String comment;
 	
-		public String getName() {
+	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
@@ -28,11 +28,11 @@ public class News {
 	public void setDate(LocalDate date) {
 		Date = date;
 	}
-	public String getReaders() {
-		return readers;
+	public String getlike() {
+		return like;
 	}
-	public void setReaders(String readers) {
-		this.readers = readers;
+	public void setlike(String like) {
+		this.like = like;
 	}
 	public String getComment() {
 		return comment;
