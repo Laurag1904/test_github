@@ -1,13 +1,13 @@
 package socialNetwork;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Photo {
 	
 	private String name;
 	private String dataname;
 	private String foto;
-	private LocalDate Time;
+	private LocalDateTime Date;
 	private String like;
 	private String comment;
 	
@@ -30,11 +30,11 @@ public class Photo {
 	public void setFoto(String foto) {
 		this.foto = foto;
 	}
-	public LocalDate getTime() {
-		return Time;
+	public LocalDateTime getDate() {
+		return Date;
 	}
-	public void setTime(LocalDate time) {
-		Time = time;
+	public void setTime(LocalDateTime Date) {
+		this.Date = Date;
 	}
 	public String getLike() {
 		return like;
