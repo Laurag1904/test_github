@@ -1,12 +1,12 @@
 package socialNetwork;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class News {
 	
 	private String name;
 	private String text;
-	private LocalDate Date;
+	private LocalDateTime Date;
 	private String like;
 	private String comment;
 	
@@ -22,10 +22,10 @@ public class News {
 	public void setText(String text) {
 		this.text = text;
 	}
-	public LocalDate getDate() {
+	public LocalDateTime getDate() {
 		return Date;
 	}
-	public void setDate(LocalDate date) {
+	public void setDate(LocalDateTime date) {
 		Date = date;
 	}
 	public String getlike() {
