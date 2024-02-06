@@ -9,7 +9,7 @@ public class NewsFeed {
 	 private String title;
 	 private String content;
 	 private String name;
-	 private LocalDateTime Date;
+	 private LocalDateTime date;
 	 private String like;
 	 private String comment;
 	 
@@ -18,12 +18,12 @@ public class NewsFeed {
 	 }
 	 
 	public NewsFeed(ArrayList<NewsFeed> newsfeed, String title, String content, String name,
-			LocalDateTime Date, String like, String comment) {
+			LocalDateTime date, String like, String comment) {
 		this.newsfeed = newsfeed;
 		this.title = title;
 		this.content = content;
 		this.name = name;
-		this.Date = Date;
+		this.date = date;
 		this.like = like;
 		this.comment = comment;
 	}
@@ -62,11 +62,11 @@ public class NewsFeed {
 	
 	
 	public LocalDateTime getDate() {
-		return Date;
+		return date;
 	}
 
 	public void setDate(LocalDateTime Date) {
-		this.Date = Date;
+		this.date = Date;
 	}
 	
 
