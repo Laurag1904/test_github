@@ -1,8 +1,9 @@
 package socialNetwork;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
-public class News {
+public class News extends NewsFeed {
 	
 	private String name;
 	private String text;
@@ -10,6 +11,22 @@ public class News {
 	private String like;
 	private String comment;
 	
+	public News() {
+		super();
+	}
+	
+	
+	public News(ArrayList<NewsFeed> newsfeed, String title, String content, String name, String text, LocalDateTime Date,
+			String like, String comment) {
+		super(newsfeed, title, content);
+		this.name = name; 
+		this.text = text;
+		this.Date = Date;
+		this.like = like;
+		this.comment = comment;
+	}
+
+
 	public String getName() {
 		return name;
 	}
