@@ -16,7 +16,7 @@ public class News extends NewsFeed {
 	
 	public News(ArrayList<NewsFeed> newsfeed, String title, String content, String text,String name, LocalDateTime date,
 			String like, String comment) {
-		super(newsfeed, title, content,name, date, like, comment);
+		super(title, content,name, date, like, comment);
 	
 		this.text = text;
 	}

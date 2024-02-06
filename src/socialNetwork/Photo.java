@@ -17,7 +17,7 @@ public class Photo extends NewsFeed{
 	
 	public Photo(ArrayList<NewsFeed> newsfeed, String title, String content,String name, String dataname,
 			String foto, LocalDateTime date, String like, String comment) {
-		super(newsfeed, title, content, name, date, like, comment);
+		super(title, content, name, date, like, comment);
 		this.dataname = dataname;
 		this.foto = foto;
 	}
