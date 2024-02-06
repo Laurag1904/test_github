@@ -1,6 +1,7 @@
 package socialNetwork;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public class Photo extends NewsFeed{
 	
@@ -16,6 +17,18 @@ public class Photo extends NewsFeed{
 	}
 	
 	
+	public Photo(ArrayList<NewsFeed> newsfeed, String title, String content, String name, String dataname,
+			String foto, LocalDateTime Date, String like, String comment) {
+		super(newsfeed, title, content);
+		this.name = name;
+		this.dataname = dataname;
+		this.foto = foto;
+		this.Date = Date;
+		this.like = like;
+		this.comment = comment;
+	}
+
+
 	public String getName() {
 		return name;
 	}
