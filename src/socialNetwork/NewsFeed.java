@@ -8,6 +8,10 @@ public class NewsFeed {
 	 private String title;
 	 private String content;
 	 
+	 public NewsFeed() {
+		 
+	 }
+	 
 	public NewsFeed(ArrayList<NewsFeed> newsfeed, String title, String content) {
 		this.newsfeed = newsfeed;
 		this.title = title;
@@ -39,6 +43,8 @@ public class NewsFeed {
 	}
 	
 	
+	
+
 	 
 	 
 	 
