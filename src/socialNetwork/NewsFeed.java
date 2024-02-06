@@ -1,5 +1,6 @@
 package socialNetwork;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class NewsFeed {
@@ -7,15 +8,24 @@ public class NewsFeed {
 	 private ArrayList<NewsFeed> newsfeed;
 	 private String title;
 	 private String content;
+	 private String name;
+	 private LocalDateTime Date;
+	 private String like;
+	 private String comment;
 	 
 	 public NewsFeed() {
 		 
 	 }
 	 
-	public NewsFeed(ArrayList<NewsFeed> newsfeed, String title, String content) {
+	public NewsFeed(ArrayList<NewsFeed> newsfeed, String title, String content, String name,
+			LocalDateTime Date, String like, String comment) {
 		this.newsfeed = newsfeed;
 		this.title = title;
 		this.content = content;
+		this.name = name;
+		this.Date = Date;
+		this.like = like;
+		this.comment = comment;
 	}
 
 	public ArrayList<NewsFeed> getNewsfeed() {
@@ -42,10 +52,38 @@ public class NewsFeed {
 		this.content = content;
 	}
 	
+	public String getname() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 	
+	
+	public LocalDateTime getDate() {
+		return Date;
+	}
+
+	public void setDate(LocalDateTime Date) {
+		this.Date = Date;
+	}
 	
 
-	 
-	 
+	public String getlike() {
+		return like;
+	}
+
+	public void setDate(String like) {
+		this.like = like;
+	}
+	
+	public String getcomment() {
+		return comment;
+	}
+
+	public void setcomment(String comment) {
+		this.comment = comment;
+	}
 	 
 }
