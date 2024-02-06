@@ -2,7 +2,7 @@ package socialNetwork;
 
 import java.time.LocalDateTime;
 
-public class Photo {
+public class Photo extends NewsFeed{
 	
 	private String name;
 	private String dataname;
@@ -10,6 +10,10 @@ public class Photo {
 	private LocalDateTime Date;
 	private String like;
 	private String comment;
+	
+	public Photo(){
+		super();
+	}
 	
 	
 	public String getName() {
