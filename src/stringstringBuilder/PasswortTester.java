@@ -1,39 +1,42 @@
 package stringstringBuilder;
 
+import java.util.LinkedList;
+import java.util.Scanner;
+
 public class PasswortTester {
 
-	public static boolean isGoodPassword(String password) {
-
-	    //Mindestlänge definieren und überprüfen
-	    final int MIN_length = 10;
-	    if (password_length < MIN_length) {
-	        System.err.println ("Ihr Passwort ist zu kurz, es muss mindestens" + MIN_length + "Zeichen lang sein!");
-	        return false;
+	    public static boolean isGoodPassword() {
+	        boolean isGoodPassword = false;
+	        boolean pwSize = false;
+	        boolean specialCases = false;
+	        boolean numbers = false;
+	        Scanner sc = new Scanner(System.in);
+	        String password = sc.nextLine();
+	        LinkedList<Character> passwordList = new LinkedList<>();
+	        for (int i = 0; i < password.length(); i++) {
+	            Character c = password.charAt(i);
+	            passwordList.add(c);
+	            if(Character.isDigit(c)) {
+	                numbers = true;
+	            }
+	            if(!Character.isLetterOrDigit(c)) {
+	                specialCases = true;
+	            }
+	            if(passwordList.size() >= 8) {
+	                pwSize = true;
+	            }
+	        }
+	        if(pwSize && specialCases && numbers) {
+	            isGoodPassword = true;
+	            System.out.println("That's a good password!");
+	        }else {
+	            System.err.println("Password is too weak!");
+	        }
+	        sc.close();
+	        return isGoodPassword;
+	    }
+	    public static void main(String[] args) {
+	        isGoodPassword();
 	    }
 
-	    //Sonderzeichen überprüfen
-	     boolean hasSpecialChar = false;
-	     for (char c: password.toCharArray()) {
-	         if (!Character.isLetterOrDigit(c)) {
-	             hasSpecialChar = true;
-	             break;
-	         }
-	     }
-
-	     //Fehlermeldung wenn kein Sonderzeichen vorhanden ist
-	        if (!hasSpecialChar) {
-	            System.err.println("Das Passwort muss mindestens ein Sonderzeichen enthalten.");
-	            return false;
-	        }
-
-	        String password1 = "Passwort123!";
-	        boolean isGood = isGoodPassword(password1);
-
-	        if (isGood) {
-	            System.out.println("Passwortstärke: Gut!");
-	        } else {
-	            System.out.println("Passwortstärke: Schlecht!");
-	        }
 	}
-
-}
