@@ -3,7 +3,8 @@ package stack;
 public class TurningWordsTest {
 	
 	public static void main(String[] args) {
-		String input = "Hello";
+		System.out.println("Hello World!");
+		System.out.println(TurningWords.reverseString("Hello World!"));
 	}
 
 }

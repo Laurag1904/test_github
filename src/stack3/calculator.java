@@ -1,63 +1,38 @@
 package stack3;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class calculator {
 
-	public static List<String> tokenize(String expression) {
-        List<String> tokens = new ArrayList<>(); 
-        Scanner scanner = new Scanner(expression);
-        while (scanner.hasNext()) {
-        	String token = scanner.next();
-            tokens.add(token);
+	public static int calculate(String input) {
+        LinkedList<Integer> stack = new LinkedList<>();
+        // operatorPattern: überprüft auf mathematische Rechenzeichnen
+        Pattern operatorPattern = Pattern.compile("[+*-/]");
+        // numericPattern: \\d... Ziffer [0-9], + beliebig viele ZIffern
+        Pattern numericPattern = Pattern.compile("\\d+");
+        
+        // \\s+ ... teilt den String auch nach mehreren Leerzeichen
+        for(String token : input.split("\\s+")) {
+        	Matcher operatorMatcher = operatorPattern.matcher(token);
+        	Matcher numericMatcher = numericPattern.matcher(token);
+        	if(numericMatcher.matches()) {
+        		stack.push(Integer.parseInt(token));
+        	} else if(operatorMatcher.matches()) {
+        		int operand1 = stack.pop();
+        		int operand2 = stack.pop();
+        		int result = 0;
+        		switch(token) {
+        			case "+" : result = operand1 + operand2; break;
+        			case "-" : result = operand1 - operand2; break;
+        			case "/" : result = operand1 / operand2;break;
+        			case "*" : result = operand1 * operand2;break;
+        			default: System.out.println("Falscher Operator");
+        		}
+        		stack.push(result);
+        	}
         }
-
-        return tokens;
-	    	    		
-	}	 
-	public static double evaluate(String expression) {
-        Stack<Double> stack = new Stack<>();
-        String[] tokens = expression.split("\\s+");
-
-        for (String token : tokens) {
-            if (isNumeric(token)) {
-                stack.push(Double.parseDouble(token));
-            } else {
-                double operand2 = stack.pop();
-                double operand1 = stack.pop();
-                double partialResult = zerlegen(operand1, operand2, token);
-                stack.push(partialResult);
-            }
-        }
-
         return stack.pop();
-    }
-	
-	 public static boolean isNumeric(String str) {
-	        return str.matches("-?\\d+(\\.\\d+)?");
-	    }
-	
-	public static double zerlegen (double operator1, double operator2, String operator) {
-		switch(operator) {
-		case "+": 
-			return operator1 + operator2;
-		case "-": 
-			return operator1 - operator2;
-			
-		case "*":
-			return operator1 * operator2;
-			
-		case "/":
-			return operator1 / operator2;
-		
-		default:
-        throw new IllegalArgumentException("Unbekannter Operator: " + operator);
-		}
-	}
-	
-
-	
+	}  
 }

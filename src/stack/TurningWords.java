@@ -1,23 +1,19 @@
 package stack;
 
-import java.util.Stack;
+import java.util.LinkedList;
 
 public class TurningWords {
 	
 	
-	public void reverseString(String input) {
-		if (input == null || input.isEmpty())
-			return;
-		Stack<Character> stack = new Stack<>();
-		 for (int i = 0; i < input.length(); i++) {
-	            stack.push(input.charAt(i));
-	        }
-		 StringBuilder reversed = new StringBuilder();
-		 while (!stack.isEmpty()) {
-	            reversed.append(stack.pop());
-	        }
-
-		
+	public static String reverseString(String input) {
+		LinkedList<Character>stack = new LinkedList<Character>();
+		for(char c : input.toCharArray()) {
+			stack.push(c);
+		}
+		StringBuilder reversedString = new StringBuilder();
+		while(!stack.isEmpty()) {
+			reversedString.append(stack.pop());
+		}
+		return reversedString.toString();
 	}
-
 }

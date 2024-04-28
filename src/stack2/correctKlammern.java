@@ -1,13 +1,13 @@
 package stack2;
 
-import java.util.Stack;
+import java.util.LinkedList;
 
 public class correctKlammern {
 	
-	public static boolean checkBrackets(String expression) {
-        Stack<Character> stack = new Stack<>();
+	public static boolean checkBrackets(String input) {
+        LinkedList<Character> stack = new LinkedList<>();
         
-        for (char ch : expression.toCharArray()) {
+        for (char ch : input.toCharArray()) {
             if (ch == '(' || ch == '[' || ch == '{') {
                 stack.push(ch);
             } else if (ch == ')' || ch == ']' || ch == '}') {
@@ -15,10 +15,11 @@ public class correctKlammern {
                     return false; // Es gibt keine passende öffnende Klammer im Stack
                 }
                 
-                char top = stack.pop();
-                if ((ch == ')' && top != '(') || (ch == ']' && top != '[') || (ch == '}' && top != '{')) {
+                char lastOpen = stack.peek();
+                if ((ch == ')' && lastOpen != '(') || (ch == ']' && lastOpen != '[') || (ch == '}' && lastOpen != '{')) {
                     return false; // Klammer ist nicht korrekt geschachtelt
                 }
+                stack.pop();
             }
         } return stack.isEmpty();
     }
