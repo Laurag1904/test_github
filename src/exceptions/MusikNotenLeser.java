@@ -30,12 +30,4 @@ public class MusikNotenLeser {
         }
 
 	}
-	
-	
-	 private static boolean isValidLine(String line) {
-	        return line.matches("[CDEFGABcdefgab', ]+");
-	 }
-	 
-	 
-
 }
